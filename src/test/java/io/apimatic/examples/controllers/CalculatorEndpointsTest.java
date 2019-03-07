@@ -121,7 +121,7 @@ public class CalculatorEndpointsTest extends ControllerTestBase {
     public void testDivide() throws Throwable {
         // Parameters for the API call
         OperationType operation = OperationType.fromString("DIVIDE");
-        double x = 10d;
+        double x = 20d;
         double y = 4d;
 
         // Set callback and perform API call
