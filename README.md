@@ -106,13 +106,13 @@ The singleton instance of the ``` CalculatorEndpoints ``` class can be accessed 
 CalculatorEndpoints calculatorEndpoints = client.getCalculatorEndpoints();
 ```
 
-### <a name="calculate_async"></a>![Method: ](https://apidocs.io/img/method.png "io.apimatic.examples.controllers.CalculatorEndpoints.calculateAsync") calculateAsync
+### <a name="calculate_op_async"></a>![Method: ](https://apidocs.io/img/method.png "io.apimatic.examples.controllers.CalculatorEndpoints.calculateOpAsync") calculateOpAsync
 
 > Calculates the expression using the specified operation..
 
 
 ```java
-void calculateAsync(
+void calculateOpAsync(
         final OperationType operation,
         final double x,
         final double y,
@@ -135,7 +135,7 @@ OperationType operation = OperationType.fromString("MULTIPLY");
 double x = 4;
 double y = 5;
 // Invoking the API call with sample inputs
-calculatorEndpoints.calculateAsync(operation, x, y, new APICallBack<Double>() {
+calculatorEndpoints.calculateOpAsync(operation, x, y, new APICallBack<Double>() {
     public void onSuccess(HttpContext context, Double response) {
         // TODO success callback handler
     }

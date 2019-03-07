@@ -62,7 +62,7 @@ public class CalculatorEndpointsTest extends ControllerTestBase {
         double result = 0;
         controller.setHttpCallBack(httpResponse);
         try {
-            result = controller.calculate(operation, x, y);
+            result = controller.calculateOp(operation, x, y);
         } catch(APIException e) {};
 
        // Test whether the response is null
@@ -95,7 +95,7 @@ public class CalculatorEndpointsTest extends ControllerTestBase {
         double result = 0;
         controller.setHttpCallBack(httpResponse);
         try {
-            result = controller.calculate(operation, x, y);
+            result = controller.calculateOp(operation, x, y);
         } catch(APIException e) {};
 
        // Test whether the response is null
@@ -121,14 +121,14 @@ public class CalculatorEndpointsTest extends ControllerTestBase {
     public void testDivide() throws Throwable {
         // Parameters for the API call
         OperationType operation = OperationType.fromString("DIVIDE");
-        double x = 20d;
+        double x = 10d;
         double y = 4d;
 
         // Set callback and perform API call
         double result = 0;
         controller.setHttpCallBack(httpResponse);
         try {
-            result = controller.calculate(operation, x, y);
+            result = controller.calculateOp(operation, x, y);
         } catch(APIException e) {};
 
        // Test whether the response is null

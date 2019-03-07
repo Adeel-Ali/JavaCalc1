@@ -47,13 +47,13 @@ public class CalculatorEndpoints extends BaseController {
      * @param    y    Required parameter: The RHS value
      * @return    Returns the Double response from the API call 
      */
-    public Double calculate(
+    public Double calculateOp(
                 final OperationType operation,
                 final double x,
                 final double y
     ) throws Throwable {
         APICallBackCatcher<Double> callback = new APICallBackCatcher<Double>();
-        calculateAsync(operation, x, y, callback);
+        calculateOpAsync(operation, x, y, callback);
         if(!callback.isSuccess())
             throw callback.getError();
         return callback.getResult();
@@ -66,7 +66,7 @@ public class CalculatorEndpoints extends BaseController {
      * @param    y    Required parameter: The RHS value
      * @return    Returns the void response from the API call 
      */
-    public void calculateAsync(
+    public void calculateOpAsync(
                 final OperationType operation,
                 final double x,
                 final double y,
